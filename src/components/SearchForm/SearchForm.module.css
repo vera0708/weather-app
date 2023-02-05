@@ -1,11 +1,9 @@
 .searchform {
     position: relative;
-    z-index: 1;
-    background: #FFFFFF;
     box-shadow: 0px 1px 20px rgba(72, 3, 38, 0.07);
-    padding: 28px 0;
+    padding: 18px 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #f1fffc;
+    background-color: #eeaed9;
 }
 
 .wrapper {
@@ -13,10 +11,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    gap: 35px;
 }
 
 button {
-    width: 300px;
     height: 60px;
     border-radius: 20px;
     border: none;
@@ -25,7 +23,7 @@ button {
     background-color: #c104da;
     color: #FFFFFF;
     cursor: pointer;
-    padding: 0;
+    padding: 0 30px;
 }
 
 .button:hover {
@@ -33,10 +31,12 @@ button {
 }
 
 .search {
-    width: 600px;
-    padding: 16px 3px;
+    flex: 1;
+    padding: 22px;
     border: 3px solid #c104da;
     border-radius: 20px;
+    font-size: 18px;
+    color: #650672;
 }
 
 @media (max-width: 1024px) {
@@ -45,7 +45,6 @@ button {
     }
 
     .button {
-        width: 220px;
         height: 45px;
         font-size: 14px;
     }

@@ -1,13 +1,6 @@
 import { useState } from 'react';
 import Container from '../Container/Container';
 import style from './SearchForm.module.css';
-import { API_KEY, API_URL } from '../../const/const';
-
-async function getWeather(city) {
-    const api_url = await fetch(`${API_URL}?key=${API_KEY}&q=${city}`)
-    const data = await api_url.json()
-    return data;
-}
 
 const SearchForm = (props) => {
     const [city, setCity] = useState('');
@@ -15,8 +8,7 @@ const SearchForm = (props) => {
     const submitForm = async (event) => {
         event.preventDefault();
 
-        const weatherData = await getWeather(city);
-        props.setWeatherData(weatherData);
+        props.search(city);
     };
 
     return (

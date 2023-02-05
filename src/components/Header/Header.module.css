@@ -23,13 +23,13 @@
 }
 
 .anyblock {
-    max-width: 100px;
+    max-width: 70px;
 }
 
 .texticon {
     text-transform: uppercase;
     font-weight: 500;
-    line-height: 1.3;
+    font-size: 12px;
 }
 
 @media (max-width: 1024px) {
