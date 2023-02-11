@@ -1,0 +1,22 @@
+.notfound {
+    display: flex;
+    max-width: 1300px;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    padding: 28px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: rgb(87, 15, 81);
+}
+
+span {
+    font-style: italic;
+}
+
+span:hover:hover {
+    text-transform: uppercase;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
