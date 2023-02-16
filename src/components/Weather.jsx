@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { API_KEY, API_URL } from '../const/const.js';
-import InfoWeather from "./Info/InfoWeather.jsx";
+import InfoWeather from "./Weather/InfoWeather.jsx";
 import SearchForm from "./SearchForm/SearchForm.jsx";
 import Spinner from "./Spinner/Spinner.jsx";
 

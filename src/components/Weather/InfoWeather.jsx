@@ -14,7 +14,7 @@ const InfoWeather = (props) => {
                             <p className={style.text}>{props.weatherData.current.temp_c}&#176;C</p>
                         </div>
                         <p className={style.dataformat}>{props.weatherData.current.condition.text}.    UV: {props.weatherData.current.uv}</p><br />
-                        <p className={style.dataformat}>Wind direction{props.weatherData.current.condition.wind_dir}.    Wind speed, km/h: {props.weatherData.current.wind_kph}</p><br />
+                        <p className={style.dataformat}>Wind direction: {props.weatherData.current.wind_dir}.    Wind speed, km/h: {props.weatherData.current.wind_kph}</p><br />
                         <p className={style.dataformat}>Humidity: {props.weatherData.current.humidity}. Feels like {props.weatherData.current.feelslike_c}&#176;</p><br />
                     </div>
                     : <div className={style.dataformat}>Enter the city and the weather will be here</div>

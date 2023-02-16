@@ -5,8 +5,10 @@ import SearchForm from "./SearchForm/SearchForm.jsx";
 import Spinner from "./Spinner/Spinner.jsx";
 
 async function getForecast(city, days) {
+
+    days = prompt('Enter the number of days', 3);
     try {
-        const response = await fetch(`${API_FORECAST_URL}?key=${API_KEY}&q=${city}&days=14`);
+        const response = await fetch(`${API_FORECAST_URL}?key=${API_KEY}&q=${city}&days=5`);
 
         if (response.status >= 500) {
             return { ok: false, message: 'Network issue' };
