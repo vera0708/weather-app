@@ -8,7 +8,7 @@ async function getForecast(city, days) {
 
     days = prompt('Enter the number of days', 3);
     try {
-        const response = await fetch(`${API_FORECAST_URL}?key=${API_KEY}&q=${city}&days=5`);
+        const response = await fetch(`${API_FORECAST_URL}?key=${API_KEY}&q=${city}&days=${days}`);
 
         if (response.status >= 500) {
             return { ok: false, message: 'Network issue' };
@@ -30,9 +30,9 @@ function Forecast() {
     const [forecastData, setForecastData] = useState();
     const [loading, setLoading] = useState(false)
 
-    const search = async (city) => {
+    const search = async (city, days) => {
         setLoading(true);
-        const response = await getForecast(city);
+        const response = await getForecast(city, days);
         setLoading(false);
 
         if (response.ok) {

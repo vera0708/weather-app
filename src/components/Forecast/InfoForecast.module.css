@@ -28,8 +28,8 @@
 .astroformat {
     display: inline-flex;
     flex-direction: row;
-    color: rgb(87, 15, 81);
-    font-size: 24px;
+    color: #f9f7f8;
+    font-size: 22px;
     font-weight: 400;
 }
 
@@ -42,13 +42,13 @@
 }
 
 .picture {
-    height: 60px;
-    padding-bottom: 10px;
+    height: 50px;
+    padding-bottom: 20px;
 }
 
 .dataformat {
     display: block;
-    color: rgb(250, 250, 111);
+    color: rgb(87, 15, 81);
     font-size: 26px;
     font-weight: 400;
 }
@@ -61,7 +61,7 @@
 
 .waitingformat {
     display: block;
-    color: rgb(87, 15, 81);
+    color: rgb(250, 250, 111);
     font-size: 32px;
     font-weight: 500;
     margin: 0 auto;
