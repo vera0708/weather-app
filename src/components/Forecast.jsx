@@ -5,8 +5,6 @@ import SearchForm from "./SearchForm/SearchForm.jsx";
 import Spinner from "./Spinner/Spinner.jsx";
 
 async function getForecast(city, days) {
-
-    days = prompt('Enter the number of days', 3);
     try {
         const response = await fetch(`${API_FORECAST_URL}?key=${API_KEY}&q=${city}&days=${days}`);
 
@@ -28,11 +26,18 @@ async function getForecast(city, days) {
 
 function Forecast() {
     const [forecastData, setForecastData] = useState();
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
+    const [days, setDays] = useState(3);
 
-    const search = async (city, days) => {
+    const search = async (city) => {
         setLoading(true);
-        const response = await getForecast(city, days);
+
+        const daysFromPromt = prompt('Enter the number of days', 3);
+        // todo - add check if promt value is a number of number is greater than 3
+        const daysNumber = Number(daysFromPromt);
+        setDays(daysNumber);
+
+        const response = await getForecast(city, daysNumber);
         setLoading(false);
 
         if (response.ok) {
@@ -45,7 +50,7 @@ function Forecast() {
     return (<>
         <SearchForm search={search} />
         {loading ? <Spinner /> : null}
-        <InfoForecast forecastData={forecastData} />
+        <InfoForecast forecastData={forecastData} days={days} />
     </>
     )
 };
